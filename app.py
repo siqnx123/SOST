@@ -27,7 +27,7 @@ ADMIN_PASSWORD = "SOST2009"
 MAX_MESSAGE_LENGTH = 50000
 DB_PATH = os.path.join(BASE_DIR, 'sost_v14.db')
 
-DAILY_LIMITS = {'wormgpt': 20, 'claude': 40, 'image_gen': 20}
+DAILY_LIMITS = {'wormgpt': 10, 'claude': 20, 'image_gen': 20}
 API_KEY_PREFIX = "SOST"
 API_KEY_DAILY_LIMIT = 20
 API_KEY_MAX_PER_USER = 5
@@ -53,8 +53,8 @@ def check_rate_limit(ip):
 # النماذج
 # ═══════════════════════════════════════════════════════════════
 MODELS = {
-    'wormgpt': {'id':'wormgpt','name':'WormGPT','desc':'النموذج الأقوى - ذاكرة قوية','icon':'🐛','color':'#e11d48','type':'chat','daily_limit':20},
-    'claude': {'id':'claude','name':'Claude AI','desc':'ذكي - يطور مواقع وتطبيقات Python','icon':'🎭','color':'#d97706','type':'chat','daily_limit':40},
+    'wormgpt': {'id':'wormgpt','name':'WormGPT','desc':'النموذج الأقوى - ذاكرة قوية','icon':'🐛','color':'#e11d48','type':'chat','daily_limit':10},
+    'claude': {'id':'claude','name':'Claude AI','desc':'ذكي - يطور مواقع وتطبيقات Python','icon':'🎭','color':'#d97706','type':'chat','daily_limit':20},
     'image_gen': {'id':'image_gen','name':'توليد صور','desc':'Photoroom AI - 70+ ستايل','icon':'🎨','color':'#ec4899','type':'image','daily_limit':20},
 }
 
